@@ -5,6 +5,22 @@
    
   * { box-sizing: border-box; }
 
+     /*A3: HSL 4 step color pallete*/
+   .hsl-color{
+      --blue190: hsl(203, 96%, 90%);
+      --blue170: hsl(203, 96%, 70%);
+      --blue150: hsl(203, 96%, 50%);
+      --blue130: hsl(203, 96%, 30%);
+   }
+
+   /*oklch looks more evenly spaced than HSL*/
+   :root{
+      --blue-ok90: oklch(0.9 0.127 246);
+      --blue-ok70: oklch(0.7 0.127 246);
+      --blue-ok50: oklch(0.5 0.127 246);
+      --blue-ok30: oklch(0.3 0.127 246);
+   }
+
    /*A3: body font-stack, font size and line height*/
    body {
       /*font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;*/
@@ -55,8 +71,8 @@
    from the next section*/
    .intro{
       color: #490e11;
-      background-color: bisque;
-      border: 4px solid #eac69a;
+      background-color: var(--blue-ok90);
+      border: 2px solid var(--blue-ok30);
       padding: 30px;
       border-radius: 8px;
       margin-bottom: 50px;
@@ -85,7 +101,7 @@
 
    /* second rule targeting heading 2 with color teal */
    h2{
-      color: #38A3A5;
+      color: var(--blue-ok50);
    }
 
    /*A2: code for aspect ratio*/
@@ -94,18 +110,15 @@
       width: 100%;
    }
 
-   /*A3: HSL 4 step color pallete*/
-   .hsl-color{
-      --blue190: hsl(203, 96%, 90%);
-      --blue170: hsl(203, 96%, 70%);
-      --blue150: hsl(203, 96%, 50%);
-      --blue130: hsl(203, 96%, 30%);
-   }
 
-   /*oklch looks more evenly spaced than HSL*/
-   .ok-color{
-      --blue-ok90: oklch(0.9 0.127 246);
-      --blue-ok70: oklch(0.7 0.127 246);
-      --blue-ok50: oklch(0.5, 0.127, 246);
-      --blue-ok30: oklch(0.3, 0.127, 246);
+   /*A3: adding one interactive colour as a button*/
+   button {
+      background-color: var(--blue-ok70);
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+}
+
+   button:hover {
+      background-color: color-mix(in oklch, var(--blue-ok50) 85%, black);
    }
