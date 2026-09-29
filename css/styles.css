@@ -31,8 +31,8 @@
 
    /*A3:adding font size, line height & text-wrap to headings*/
    h1 {
-  background-color: #d8d2e1;
-     
+      /*background-color: #d8d2e1;*/
+      color: var(--blue-ok30);
       font-size: 2.5rem;
       line-height: 1.1;
       text-wrap: balance;
@@ -70,7 +70,7 @@
    a border-radius, and a bottom margin separating it 
    from the next section*/
    .intro{
-      color: #490e11;
+      color: black;
       background-color: var(--blue-ok90);
       border: 2px solid var(--blue-ok30);
       padding: 30px;
@@ -113,12 +113,12 @@
 
    /*A3: adding one interactive colour as a button*/
    button {
-      background-color: var(--blue-ok70);
-      color: white;
+      background-color: var(--blue-ok90);
+      color: black;
       padding: 10px;
       border-radius: 6px;
 }
 
    button:hover {
-      background-color: color-mix(in oklch, var(--blue-ok50) 85%, black);
+      background-color: color-mix(in oklch, var(--blue-ok70) 85%, black);
    }
