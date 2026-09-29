@@ -20,6 +20,7 @@
       font-size: 2.5rem;
       line-height: 1.1;
       text-wrap: balance;
+      text-align: center;
    }
 
 
@@ -59,7 +60,8 @@
       padding: 30px;
       border-radius: 8px;
       margin-bottom: 50px;
-      width: 970px;
+      width: 1200px;
+      text-align: center;
       margin-left: auto;
       margin-right: auto;
    }
@@ -90,4 +92,20 @@
    .frame{
       aspect-ratio: 16 / 9;
       width: 100%;
+   }
+
+   /*A3: HSL 4 step color pallete*/
+   .hsl-color{
+      --blue190: hsl(203, 96%, 90%);
+      --blue170: hsl(203, 96%, 70%);
+      --blue150: hsl(203, 96%, 50%);
+      --blue130: hsl(203, 96%, 30%);
+   }
+
+   /*oklch looks more evenly spaced than HSL*/
+   .ok-color{
+      --blue-ok90: oklch(0.9 0.127 246);
+      --blue-ok70: oklch(0.7 0.127 246);
+      --blue-ok50: oklch(0.5, 0.127, 246);
+      --blue-ok30: oklch(0.3, 0.127, 246);
    }
